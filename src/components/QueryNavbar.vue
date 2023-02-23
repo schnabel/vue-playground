@@ -63,7 +63,14 @@ const date = ref()
             </li>
           </ul>
           <form class="d-flex mt-3" role="search">
-            <Datepicker class="me-2" v-model="date" />
+            <Datepicker
+              class="me-2"
+              v-model="date"
+              format="yyyy.MM.dd"
+              locale="de"
+              text-input
+              placeholder="JJJJ.MM.DD"
+            />
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
           <form class="d-flex mt-3" role="search">
