@@ -55,6 +55,12 @@
             </li>
           </ul>
           <form class="d-flex mt-3" role="search">
+            <Datepicker
+              class="me-2" v-model="date"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <form class="d-flex mt-3" role="search">
             <input
               class="form-control me-2"
               type="search"
@@ -68,3 +74,11 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css';
+
+const date = ref();
+</script>
